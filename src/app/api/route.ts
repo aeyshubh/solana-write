@@ -3,15 +3,20 @@ import { ACTIONS_CORS_HEADERS, ActionsJson } from "@solana/actions";
 export const GET = async () => {
   const payload: ActionsJson = {
     rules: [
-      // Map all root level routes to an action
+      // map all root level routes to an action
       {
-        pathPattern: "/",
-        apiPath: "/api/write/",
+        pathPattern: "/*",
+        apiPath: "/api/write/*",
+      },
+      // idempotent rule as the fallback
+      {
+        pathPattern: "/api/write/**",
+        apiPath: "/api/write/**",
       },
     ],
   };
 
-  return new Response(JSON.stringify(payload), {
+  return Response.json(payload, {
     headers: ACTIONS_CORS_HEADERS,
   });
 };
