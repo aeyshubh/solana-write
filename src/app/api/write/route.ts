@@ -24,7 +24,7 @@ import { send } from 'process';
 
   // GET request handler
   /// const BASE_URL ="https://c342-2402-a00-404-23fb-14b3-138-e5cc-d662.ngrok-free.app"
-  const BASE_URL ="http://localhost:3000";
+  const BASE_URL ="https://solana-write.vercel.app";
   export async function GET(request: Request) {
     const url = new URL(request.url);
     console.log("URL",url);
