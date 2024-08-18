@@ -1,3 +1,4 @@
+//@ts-ignore
 import {
     ACTIONS_CORS_HEADERS,
     ActionGetResponse,
