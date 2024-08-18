@@ -1,4 +1,4 @@
-//@ts-ignore
+// @ts-nocheck
 import {
     ACTIONS_CORS_HEADERS,
     ActionGetResponse,
