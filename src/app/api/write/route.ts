@@ -90,7 +90,6 @@ export async function POST(request: Request) {
       const FEEPAYER_privateKey = bs58.decode(FEEPAYERKeyString);
       const FEEPAYER_keypair = Keypair.fromSecretKey(FEEPAYER_privateKey);
       const FEEPAYER_publicKey = FEEPAYER_keypair.publicKey.toString();
-      const connection = new Connection(process.env.RPC, "confirmed");
 
   transaction.feePayer = new PublicKey(FEEPAYER_publicKey);
   transaction.recentBlockhash = (
