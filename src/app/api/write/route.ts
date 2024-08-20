@@ -23,13 +23,13 @@ import { write } from "fs";
 import { send } from "process";
 
 // GET request handler
-//const BASE_URL ="http://localhost:3000"
-const BASE_URL = "https://writeblink.hishubh.com";
+const BASE_URL ="http://localhost:3000"
+//const BASE_URL = "https://writeblink.hishubh.com";
 export async function GET(request: Request) {
   const url = new URL(request.url);
   console.log("URL", url);
   const payload: ActionGetResponse = {
-    icon: "https://drive.google.com/file/d/1fJNwWahtRTHmut952e91U7LIeZB1fACv", // Local icon path
+    icon: "https://cdn.leonardo.ai/users/728ce219-ff82-4074-aa69-cd2c8d5bd8a5/generations/035fcb20-0751-4d73-96bd-cfee1d89b58c/Default_A_futuristic_hightech_digital_illustration_featuring_a_3.jpg", // Local icon path
     label: "Write Text",
     title: "Inscribe text on Solana Forever",
     description:
