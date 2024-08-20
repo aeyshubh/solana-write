@@ -23,13 +23,13 @@ import { write } from "fs";
 import { send } from "process";
 
 // GET request handler
-//const BASE_URL ="http://localhost:3000"
- const BASE_URL = "https://writeblink.hishubh.com";
+const BASE_URL ="http://localhost:3000"
+//const BASE_URL = "https://writeblink.hishubh.com";
 export async function GET(request: Request) {
   const url = new URL(request.url);
   console.log("URL", url);
   const payload: ActionGetResponse = {
-    icon: "https://github.com/aeyshubh/solana-write/blob/8bf8e723caa0c8f5849ca2295584302baa282087/public/images/ins.jpg", // Local icon path
+    icon: "https://drive.google.com/file/d/1fJNwWahtRTHmut952e91U7LIeZB1fACv", // Local icon path
     label: "Write Text",
     title: "Inscribe text on Solana Forever",
     description:
