@@ -29,7 +29,7 @@ export async function GET(request: Request) {
   const url = new URL(request.url);
   console.log("URL", url);
   const payload: ActionGetResponse = {
-    icon: "https://github.com/aeyshubh/solana-write/blob/78044a37dea47f4e7adbf7530d6ca2447bb7e130/public/images/ins.png", // Local icon path
+    icon: "https://github.com/aeyshubh/solana-write/blob/8bf8e723caa0c8f5849ca2295584302baa282087/public/images/ins.jpg", // Local icon path
     label: "Write Text",
     title: "Inscribe text on Solana Forever",
     description:
