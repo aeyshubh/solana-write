@@ -24,12 +24,12 @@ import { send } from "process";
 
 // GET request handler
 //const BASE_URL ="http://localhost:3000"
- const BASE_URL = "https://solana-write.vercel.app";
+ const BASE_URL = "https://writeblink.hishubh.com";
 export async function GET(request: Request) {
   const url = new URL(request.url);
   console.log("URL", url);
   const payload: ActionGetResponse = {
-    icon: "https://i.pinimg.com/736x/b8/af/da/b8afdad6ce060c62f92076424ed5fab7.jpg", // Local icon path
+    icon: "https://github.com/aeyshubh/solana-write/blob/78044a37dea47f4e7adbf7530d6ca2447bb7e130/public/images/ins.png", // Local icon path
     label: "Write Text",
     title: "Inscribe text on Solana Forever",
     description:
