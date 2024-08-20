@@ -23,8 +23,8 @@ import { write } from "fs";
 import { send } from "process";
 
 // GET request handler
-/// const BASE_URL ="https://c342-2402-a00-404-23fb-14b3-138-e5cc-d662.ngrok-free.app"
-const BASE_URL = "https://solana-write.vercel.app";
+//const BASE_URL ="http://localhost:3000"
+ const BASE_URL = "https://solana-write.vercel.app";
 export async function GET(request: Request) {
   const url = new URL(request.url);
   console.log("URL", url);
@@ -86,12 +86,7 @@ export async function POST(request: Request) {
       programId: new PublicKey(MEMO_PROGRAM_ID),
     }
   );
-      const FEEPAYERKeyString = process.env.FEE_PAYER;
-      const FEEPAYER_privateKey = bs58.decode(FEEPAYERKeyString);
-      const FEEPAYER_keypair = Keypair.fromSecretKey(FEEPAYER_privateKey);
-      const FEEPAYER_publicKey = FEEPAYER_keypair.publicKey.toString();
-
-  transaction.feePayer = new PublicKey(FEEPAYER_publicKey);
+  transaction.feePayer = sender;
   transaction.recentBlockhash = (
     await connection.getLatestBlockhash()
   ).blockhash;
