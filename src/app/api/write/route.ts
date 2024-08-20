@@ -23,8 +23,8 @@ import { write } from "fs";
 import { send } from "process";
 
 // GET request handler
-const BASE_URL ="http://localhost:3000"
-//const BASE_URL = "https://writeblink.hishubh.com";
+//const BASE_URL ="http://localhost:3000"
+const BASE_URL = "https://writeblink.hishubh.com";
 export async function GET(request: Request) {
   const url = new URL(request.url);
   console.log("URL", url);
